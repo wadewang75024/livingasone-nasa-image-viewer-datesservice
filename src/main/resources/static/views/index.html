@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Main Page</title>
+</head>
+<body ng-app="nasa.datesservice">
+<hr/>
+<div class="container" ng-controller="DatesController">
+    <div class="row">
+        <!--  
+        <label>User</label> <input type="text" ng-model="userDto.userName" class="input-sm spacing"/>
+        <label>Skills</label> <input type="text" ng-model="skills" ng-list class="input-sm custom-width spacing"
+                                     placeholder="use comma to separate skills"/>
+                                     -->
+        <button ng-click="displayDates()" class="btn btn-sm btn-info">Display Dates</button>
+    </div>
+    <hr/>
+    <div class="row">
+        <p>{{allDates | json}}</p>
+    </div>
+    <hr/>
+    <div class="row" ng-repeat="date in allDates">
+        <div class="">
+            <h3>{{date}}</h3>
+        </div>
+    </div>
+</div>
+</body>
+<script src="/js/lib/angular.min.js"></script>
+<script src="/js/lib/ui-bootstrap-tpls-2.5.0.min.js"></script>
+<script src="/js/app/app.js"></script>
+<script src="/js/app/DatesController.js"></script>
+<script src="/js/app/DatesService.js"></script>
+<link rel="stylesheet" href="/css/lib/bootstrap.min.css"/>
+<link rel="stylesheet" href="/css/app/app.css"/>
+</html>

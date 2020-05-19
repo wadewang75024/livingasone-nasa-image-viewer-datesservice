@@ -30,6 +30,7 @@ public class DatesServiceImpl implements DatesService {
 	private String[] datesFormats;
 
 	public List<String> getDatesList() {
+		logger.info("getDatesList");
 		return datesList;
 	}
 
